@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: public
+    hibernate:
+      ddl-auto: none
+    open-in-view:
+  liquibase:
+    enabled: true
+    change-log: classpath:/db.changelog/changelog-master.xml
+    default-schema: public
+    liquibase-schema: public
+    clear-checksums: on
+
